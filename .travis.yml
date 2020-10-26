@@ -3,5 +3,8 @@
 bioc_packages:
   - Biostrings
 
+before_install:
+  - sudo apt-get install libglu1-mesa-dev
+
 language: R
 cache: packages
