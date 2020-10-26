@@ -1,7 +1,7 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 bioc_packages:
-  - BioStrings
+  - Biostrings
 
 language: R
 cache: packages
