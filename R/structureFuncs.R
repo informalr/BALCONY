@@ -47,7 +47,7 @@ create_structure_seq <-
         probability = list()
         if (!is.null(pdb_path)) {
             if (is.null(chain_identifier)) {
-                print("Chain identifier required!")
+                message("Chain identifier required!")
                 stop()
             }
             missing = find_consecutive_seq(
@@ -164,7 +164,7 @@ create_structure_seq <-
 #' require(Rpdb)
 #' chain_identifier = "A"
 #' pdb_path = system.file("extdata", "4jnc.pdb", package = "BALCONY")
-#' print(pdb_path)
+#' message(pdb_path)
 #' remark465_data = get_remarks465_pdb(pdb_path,chain_identifier)
 get_remarks465_pdb <- function(pdb_path, chain_identifier) {
     #pdb_file_path: a path to the pdb file
@@ -279,7 +279,7 @@ get_prot_entropy <- function(protein_index, score_list) {
         }
         names(prot_cons) <- names(score_list)
     } else{
-        print("score_list is not a list!")
+        message("score_list is not a list!")
         stop()
     }
     return(prot_cons)
@@ -563,7 +563,7 @@ plot_structure_on_protein <-
                 }
             }
         } else{
-            print("The lists contain different number of conservation/entropy scores!")
+            message("The lists contain different number of conservation/entropy scores!")
         }
     }
 
